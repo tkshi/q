@@ -1,10 +1,9 @@
 import React from 'react'
-import Modal from './Modal'
+import Questionnaire from './Questionnaire'
 
 const mapToquestionnairesList = (questionnaires)=>{
-  console.log(questionnaires)
-  return questionnaires.map((questionnaire,i)=>{
-    return <li key={i}>{questionnaire.title}</li>
+  return Object.keys(questionnaires).map((key,i)=>{
+    return <Questionnaire key={i} {...questionnaires[key]} />
   })
 }
 
@@ -19,7 +18,7 @@ export const QuestionnaireList = (props) => (
 )
 
 QuestionnaireList.propTypes = {
-  questionnaire: React.PropTypes.array.isRequired
+  questionnaire: React.PropTypes.object.isRequired
 }
 
 export default QuestionnaireList
