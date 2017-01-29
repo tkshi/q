@@ -11,7 +11,7 @@ export const Counter = (props) => (
 )
 
 Counter.propTypes = {
-  questionnaire     : React.PropTypes.array.isRequired,
+  questionnaire     : React.PropTypes.object.isRequired,
   fetchQuestionnaires : React.PropTypes.func.isRequired,
 }
 
